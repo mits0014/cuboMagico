@@ -1,7 +1,9 @@
 import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { createCubies } from './createCubies';
 import { createSence } from './createScene';
+import { createControls } from './createControls';
+import { rotateLayer } from './cubeControls/rotateLayer';
+import { showArrows } from './cubeControls/showArrows';
 
 // Cena, câmera e renderizador
 const scene = createSence();
@@ -11,14 +13,18 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
 // Controles orbitais
-const controls = new OrbitControls(camera, renderer.domElement);
-controls.enableDamping = true;
-camera.position.set(5, 5, 5);
-controls.update();
-
+const controls = createControls(camera, renderer);
 
 // Criando os cubies (26 cubinhos visíveis)
 const cubies = createCubies(scene);
+const raycaster = new THREE.Raycaster();
+const mouse = new THREE.Vector2();
+
+const arrowsGroup = new THREE.Group();
+scene.add(arrowsGroup);
+
+showArrows(cubies, scene, camera);
+
 
 // Animação
 function animate() {
@@ -28,3 +34,4 @@ function animate() {
 }
 
 animate();
+
