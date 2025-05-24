@@ -1,7 +1,6 @@
 import * as THREE from 'three';
-
 import { showArrows } from './cubeControls/showArrows';
-import { camera } from './main';
+
 
 const faceOrder = ["Right", "Left", "Up", "Down", "Front", "Back"];
 
@@ -27,7 +26,7 @@ let currentCubies = [];
  * @param {Object} newState - Estado do cubo vindo do backend.
  * @param {THREE.Scene} scene - Cena do Three.js onde os cubos estão sendo renderizados.
  */
-export function updateCubeInScene(newState, scene) {
+export function updateCubeInScene(newState, scene, camera) {
   if (!scene) {
     console.error("Cena não fornecida para updateCubeInScene.");
     return;
@@ -39,7 +38,7 @@ export function updateCubeInScene(newState, scene) {
     if (cubie.edges) scene.remove(cubie.edges);
   }
   currentCubies = [];
-  console.log("novo estado", newState);
+  //console.log("novo estado", newState);
   // Adiciona os cubies atualizados
   for (const cubieData of newState.cubies) {
     const geometry = new THREE.BoxGeometry(1, 1, 1);

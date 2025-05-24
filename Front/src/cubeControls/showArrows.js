@@ -18,7 +18,7 @@ export function showArrows(cubies, scene, camera) {
         const intersects = raycaster.intersectObjects(cubies);
 
         const cubieClicado = intersects[0].object;
-        console.log('Cubie clicado:', cubieClicado.position);
+        //console.log('Cubie clicado:', cubieClicado.position);
         if (intersects.length > 0) {
             const intersect = intersects[0];
             const clickedCubie = intersect.object;

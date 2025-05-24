@@ -23,17 +23,15 @@ public class Cube
                     if (y == 2) cubie.SetColor(Face.Up, "White");
                     if (y == 0) cubie.SetColor(Face.Down, "Yellow");
 
-                    if (x == 0) cubie.SetColor(Face.Left, "Orange");
-                    if (x == 2) cubie.SetColor(Face.Right, "Red");
+                    if (x == 0) cubie.SetColor(Face.Left, "Red");
+                    if (x == 2) cubie.SetColor(Face.Right, "Orange");
 
-                    if (z == 2) cubie.SetColor(Face.Front, "Green");
-                    if (z == 0) cubie.SetColor(Face.Back, "Blue");
+                    if (z == 2) cubie.SetColor(Face.Front, "Blue");
+                    if (z == 0) cubie.SetColor(Face.Back, "Green");
 
                     Cubies[x, y, z] = cubie;
                 }
             }
         }
     }
-
-    // Aqui virão os métodos RotateFace(Face face, bool clockwise), etc.
 }

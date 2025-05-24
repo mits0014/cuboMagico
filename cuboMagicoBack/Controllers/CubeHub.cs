@@ -12,6 +12,8 @@ namespace cuboMagicoBack.Controllers
 
         public async Task Rotate(string face, string direction)
         {
+            Console.WriteLine($"current cube state:");
+            CubeLogic.PrintTopFace(_cubeState.Cubies);
             Console.WriteLine($"Rotating face: {face}, direction: {direction}");
 
             if (!Enum.TryParse<Face>(face, true, out var parsedFace))
@@ -26,6 +28,8 @@ namespace cuboMagicoBack.Controllers
             CubeLogic.RotateFaceClockwise(_cubeState.Cubies, (CubeFace)parsedFace);
 
             // Envia o novo estado do cubo a todos os clientes
+            Console.WriteLine($"apos a rotação do cubo:");
+            CubeLogic.PrintTopFace(_cubeState.Cubies);
             Console.WriteLine($"Sending updated cube state to all clients.");
             var dto = CubeMapper.ToDto(_cubeState.Cubies);
             await Clients.All.SendAsync("CubeUpdated", dto);

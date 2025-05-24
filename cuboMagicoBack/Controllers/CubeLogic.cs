@@ -40,17 +40,33 @@ public static class CubeLogic
     }
 
     private static void RotateCubieFacesClockwise(Cubie cubie, Face rotatingFace)
+    {
+        if (rotatingFace != Face.Up)
+            throw new NotImplementedException("Somente a rotação da face Up foi implementada.");
+
+        // Roda as cores das faces lateralmente (como vista de cima)
+        var original = new Dictionary<Face, string>(cubie.FaceColors);
+
+        if (original.ContainsKey(Face.Front)) cubie.SetColor(Face.Right, original[Face.Front]);
+        if (original.ContainsKey(Face.Right)) cubie.SetColor(Face.Back, original[Face.Right]);
+        if (original.ContainsKey(Face.Back)) cubie.SetColor(Face.Left, original[Face.Back]);
+        if (original.ContainsKey(Face.Left)) cubie.SetColor(Face.Front, original[Face.Left]);
+    }
+
+public static void PrintTopFace(Cubie[,,] cubies)
 {
-    if (rotatingFace != Face.Up)
-        throw new NotImplementedException("Somente a rotação da face Up foi implementada.");
-
-    // Roda as cores das faces lateralmente (como vista de cima)
-    var original = new Dictionary<Face, string>(cubie.FaceColors);
-
-    if (original.ContainsKey(Face.Front)) cubie.SetColor(Face.Right, original[Face.Front]);
-    if (original.ContainsKey(Face.Right)) cubie.SetColor(Face.Back, original[Face.Right]);
-    if (original.ContainsKey(Face.Back)) cubie.SetColor(Face.Left, original[Face.Back]);
-    if (original.ContainsKey(Face.Left)) cubie.SetColor(Face.Front, original[Face.Left]);
+    Console.WriteLine("Face Up (y = 2):");
+    for (int z = 2; z >= 0; z--) // z de 2 a 0 para que a visualização fique "de cima para baixo"
+    {
+        for (int x = 0; x < 3; x++)
+        {
+            var cubie = cubies[x, 2, z];
+            string color = cubie.FaceColors[Face.Up].ToString().PadRight(7);
+            Console.Write(color + " ");
+        }
+        Console.WriteLine();
+    }
+    Console.WriteLine();
 }
 
 
