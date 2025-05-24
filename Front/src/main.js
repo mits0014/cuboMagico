@@ -1,9 +1,8 @@
 import * as THREE from 'three';
-import { updateCubeInScene } from './createCubies';
 import { createSence } from './createScene';
 import { createControls } from './createControls';
-import { rotateLayer } from './cubeControls/rotateLayer';
-import { showArrows } from './cubeControls/showArrows';
+import { cubies } from './conection/service';
+import * as signalR from "@microsoft/signalr";
 
 // Cena, câmera e renderizador
 const scene = createSence();
@@ -11,19 +10,27 @@ const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerH
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
-
-// Controles orbitais
 const controls = createControls(camera, renderer);
 
-// Criando os cubies (26 cubinhos visíveis)
-const cubies = updateCubeInScene(scene);
-const raycaster = new THREE.Raycaster();
-const mouse = new THREE.Vector2();
 
-const arrowsGroup = new THREE.Group();
-scene.add(arrowsGroup);
+// Conexão com o SignalR websocket
+export const connection = new signalR.HubConnectionBuilder()
+  .withUrl("http://localhost:5286/cubehub")
+  .withAutomaticReconnect()
+  .build();
 
-showArrows(cubies, scene, camera);
+const cubies = [];
+
+// inicia conexão e escuta atualizações do cubo
+connection.start().then(() => {
+  console.log("Conectado ao SignalR");
+});
+
+// receber atualizações do cubo e atualizar a cena
+connection.on("CubeUpdated", (newState) => {
+  console.log("Estado do cubo atualizado recebido:", newState);
+  updateCubeInScene(newState, scene); // Atualize os cubies no Three.js
+});
 
 
 // Animação
