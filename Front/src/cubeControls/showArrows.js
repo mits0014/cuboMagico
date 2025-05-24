@@ -92,7 +92,7 @@ export function renderArrows(cubie, faceDirection, arrowsGroup, camera) {
         arrowsGroup.add(arrow);
         arrows.push(arrow);
     });
-    window.addEventListener('click', (event) => onClickArrow(event, camera, arrowsGroup), false);
+    window.addEventListener('click', (event) => onClickArrow(event, camera, arrowsGroup, origin), false);
 }
 
 function getClickedFaceDirection(faceIndex) {

@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { sendRotation } from '../conection/service.js';
-export function onClickArrow(event, camera, arrowsGroup) {
+export function onClickArrow(event, camera, arrowsGroup, cubie) {
     const mouse = new THREE.Vector2();
     const raycaster = new THREE.Raycaster();
 
@@ -26,11 +26,16 @@ export function onClickArrow(event, camera, arrowsGroup) {
         // Prepara o comando para o backend
         const command = {
             face: face,
-            direction: rotationDirection
+            direction: rotationDirection,
+            cubie: {
+                x: cubie.x,
+                y: cubie.y,
+                z: cubie.z
+            }
         };
 
         // Envie para o backend (via WebSocket ou HTTP POST)
-        sendRotation(command.face, command.direction);
+        sendRotation(command.face, command.direction, command.cubie);
         arrowsGroup.clear(); // Remove a seta após o clique
     }
 }

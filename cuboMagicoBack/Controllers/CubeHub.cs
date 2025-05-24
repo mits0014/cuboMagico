@@ -10,9 +10,9 @@ namespace cuboMagicoBack.Controllers
         // Estado central do cubo mágico
         private static Cube _cubeState = new Cube();
 
-        public async Task Rotate(string face, string direction)
+        public async Task Rotate(string face, string direction, int x, int y, int z)
         {
-            Console.WriteLine($"Rotating face: {face}, direction: {direction}");
+            Console.WriteLine($"Rotação: face={face}, direção={direction}, posição=({x},{y},{z})");
 
             if (!Enum.TryParse<Face>(face, true, out var parsedFace))
             {
@@ -20,7 +20,7 @@ namespace cuboMagicoBack.Controllers
                 return;
             }
 
-            
+
 
             // Rotaciona a face apropriada
             CubeLogic.RotateFaceClockwise(_cubeState.Cubies, (CubeFace)parsedFace);
