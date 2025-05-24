@@ -1,47 +1,61 @@
 import * as THREE from 'three';
 // Cores das faces
-const faceColors = {
-    Up: 0xffffff,    // Branco
-    Down: 0xffff00,  // Amarelo
-    Left: 0xff0000,  // Vermelho
-    Right: 0xffa500, // Laranja
-    Front: 0x0750ED, // Azul
-    Back: 0x00ff00   // Verde
+const faceOrder = ["Right", "Left", "Up", "Down", "Front", "Back"];
+const faceMap = {
+  Right: 0,
+  Left: 1,
+  Up: 2,
+  Down: 3,
+  Front: 4,
+  Back: 5
 };
 
-  // Criando os cubies (26 cubinhos visíveis)
-  export function createCubies(scene) {
-    const cubies = [];
-  
-    for (let x = -1; x <= 1; x++) {
-      for (let y = -1; y <= 1; y++) {
-        for (let z = -1; z <= 1; z++) {
-          if (x === 0 && y === 0 && z === 0) continue;
-  
-          const geometry = new THREE.BoxGeometry(1, 1, 1);
-          const materials = [
-            new THREE.MeshBasicMaterial({ color: x === 1 ? faceColors.Right : 0x000000 }), // Right
-            new THREE.MeshBasicMaterial({ color: x === -1 ? faceColors.Left : 0x000000 }),  // Left
-            new THREE.MeshBasicMaterial({ color: y === 1 ? faceColors.Up : 0x000000 }),     // Top
-            new THREE.MeshBasicMaterial({ color: y === -1 ? faceColors.Down : 0x000000 }),  // Bottom
-            new THREE.MeshBasicMaterial({ color: z === 1 ? faceColors.Front : 0x000000 }),  // Front
-            new THREE.MeshBasicMaterial({ color: z === -1 ? faceColors.Back : 0x000000 })   // Back
-          ];
-  
-          const cubie = new THREE.Mesh(geometry, materials);
-          cubie.position.set(x, y, z);
-          scene.add(cubie);
-          cubies.push(cubie);
-  
-          // Adiciona bordas
-          const edgeGeometry = new THREE.EdgesGeometry(geometry);
-          const edgeMaterial = new THREE.LineBasicMaterial({ color: 0x000000 });
-          const edges = new THREE.LineSegments(edgeGeometry, edgeMaterial);
-          edges.position.copy(cubie.position);
-          scene.add(edges);
-        }
-      }
-    }
-  
-    return cubies; // Retorna os cubies, se precisar manipulá-los depois
+function hexColor(colorName) {
+  const colors = {
+    white: 0xffffff,
+    yellow: 0xffff00,
+    red: 0xff0000,
+    orange: 0xffa500,
+    blue: 0x0000ff,
+    green: 0x00ff00,
+    black: 0x000000
+  };
+  return colors[colorName.toLowerCase()] ?? 0x000000;
+}
+
+let currentCubies = [];
+
+export function updateCubeInScene(newState) {
+  // Remover cubies anteriores da cena
+  for (const cubie of currentCubies) {
+    scene.remove(cubie);
+    if (cubie.edges) scene.remove(cubie.edges);
   }
+  currentCubies = [];
+
+  for (const cubieData of newState.cubies) {
+    const geometry = new THREE.BoxGeometry(1, 1, 1);
+
+    // Cria os materiais nas posições corretas
+    const materials = new Array(6).fill(null).map((_, index) => {
+      const faceName = faceOrder[index];
+      const colorName = cubieData.faceColors[faceName] ?? "black";
+      return new THREE.MeshBasicMaterial({ color: hexColor(colorName) });
+    });
+
+    const mesh = new THREE.Mesh(geometry, materials);
+    mesh.position.set(cubieData.x, cubieData.y, cubieData.z);
+    scene.add(mesh);
+
+    // Adiciona bordas
+    const edgeGeometry = new THREE.EdgesGeometry(geometry);
+    const edgeMaterial = new THREE.LineBasicMaterial({ color: 0x000000 });
+    const edges = new THREE.LineSegments(edgeGeometry, edgeMaterial);
+    edges.position.copy(mesh.position);
+    scene.add(edges);
+
+    // Guardar para remoção futura
+    mesh.edges = edges;
+    currentCubies.push(mesh);
+  }
+}

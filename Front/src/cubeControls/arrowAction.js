@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import {sendToBackend} from '../conection/service.js';
+import { sendRotation } from '../conection/service.js';
 export function onClickArrow(event, camera, arrowsGroup) {
     const mouse = new THREE.Vector2();
     const raycaster = new THREE.Raycaster();
@@ -30,7 +30,7 @@ export function onClickArrow(event, camera, arrowsGroup) {
         };
 
         // Envie para o backend (via WebSocket ou HTTP POST)
-        sendToBackend(command);
+        sendRotation(command.face, command.direction);
         arrowsGroup.clear(); // Remove a seta após o clique
     }
 }

@@ -1,0 +1,6 @@
+@cuboMagicoBack_HostAddress = http://localhost:5286
+
+GET {{cuboMagicoBack_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

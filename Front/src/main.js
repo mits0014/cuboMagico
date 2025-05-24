@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { createCubies } from './createCubies';
+import { updateCubeInScene } from './createCubies';
 import { createSence } from './createScene';
 import { createControls } from './createControls';
 import { rotateLayer } from './cubeControls/rotateLayer';
@@ -16,7 +16,7 @@ document.body.appendChild(renderer.domElement);
 const controls = createControls(camera, renderer);
 
 // Criando os cubies (26 cubinhos visíveis)
-const cubies = createCubies(scene);
+const cubies = updateCubeInScene(scene);
 const raycaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2();
 
@@ -34,4 +34,6 @@ function animate() {
 }
 
 animate();
+
+
 
