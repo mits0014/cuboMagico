@@ -42,3 +42,42 @@ C:\Users\MATHEUS\Desktop\cuboMagicovite\cuboMagicoBack\bin\Debug\net8.0\Microsof
 C:\Users\MATHEUS\Desktop\cuboMagicovite\cuboMagicoBack\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 C:\Users\MATHEUS\Desktop\cuboMagicovite\cuboMagicoBack\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\MATHEUS\Desktop\cuboMagicovite\cuboMagicoBack\bin\Debug\net8.0\System.Net.WebSockets.WebSocketProtocol.dll
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\bin\Debug\net8.0\appsettings.json
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\bin\Debug\net8.0\cuboMagicoBack.staticwebassets.endpoints.json
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\bin\Debug\net8.0\cuboMagicoBack.exe
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\bin\Debug\net8.0\cuboMagicoBack.deps.json
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\bin\Debug\net8.0\cuboMagicoBack.runtimeconfig.json
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\bin\Debug\net8.0\cuboMagicoBack.dll
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\bin\Debug\net8.0\cuboMagicoBack.pdb
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\bin\Debug\net8.0\System.Net.WebSockets.WebSocketProtocol.dll
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\obj\Debug\net8.0\cuboMagicoBack.csproj.AssemblyReference.cache
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\obj\Debug\net8.0\cuboMagicoBack.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\obj\Debug\net8.0\cuboMagicoBack.AssemblyInfoInputs.cache
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\obj\Debug\net8.0\cuboMagicoBack.AssemblyInfo.cs
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\obj\Debug\net8.0\cuboMagicoBack.csproj.CoreCompileInputs.cache
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\obj\Debug\net8.0\cuboMagicoBack.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\obj\Debug\net8.0\cuboMagicoBack.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\obj\Debug\net8.0\cuboMagicoBack.sourcelink.json
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\obj\Debug\net8.0\scopedcss\bundle\cuboMagicoBack.styles.css
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\obj\Debug\net8.0\cuboMagi.0A8ECC32.Up2Date
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\obj\Debug\net8.0\cuboMagicoBack.dll
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\obj\Debug\net8.0\refint\cuboMagicoBack.dll
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\obj\Debug\net8.0\cuboMagicoBack.pdb
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\obj\Debug\net8.0\cuboMagicoBack.genruntimeconfig.cache
+C:\Users\MatheusLima\OneDrive\Área de Trabalho\cuboMagico\cuboMagicoBack\obj\Debug\net8.0\ref\cuboMagicoBack.dll

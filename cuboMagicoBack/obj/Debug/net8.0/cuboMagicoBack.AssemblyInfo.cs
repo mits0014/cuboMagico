@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("cuboMagicoBack")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dbb6db65f13bf8ab4983ab180d9b64f585b8a159")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7c2f0fbd60b265e108bb24f99bd3648b2fad347d")]
 [assembly: System.Reflection.AssemblyProductAttribute("cuboMagicoBack")]
 [assembly: System.Reflection.AssemblyTitleAttribute("cuboMagicoBack")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

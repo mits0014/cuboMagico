@@ -1,3 +1,5 @@
+using CuboMagicoBack.Models;
+
 public class CubieDto
 {
     public int X { get; set; }

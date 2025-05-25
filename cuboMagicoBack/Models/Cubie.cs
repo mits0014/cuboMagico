@@ -1,3 +1,4 @@
+namespace CuboMagicoBack.Models;
 public enum Face
 {
     Up, Down, Left, Right, Front, Back
@@ -27,6 +28,13 @@ public class Cubie
     public string GetColor(Face face)
     {
         return FaceColors.ContainsKey(face) ? FaceColors[face] : "None";
+    }
+
+
+    public void RemoveColor(Face face)
+    {
+        if (FaceColors.ContainsKey(face))
+            FaceColors.Remove(face);
     }
 
     // Gira as cores do cubie com base na rotação de uma face (a lógica será implementada dentro da classe Cube)

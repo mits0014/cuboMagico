@@ -1,3 +1,5 @@
+using CuboMagicoBack.Models;
+
 public static class CubeMapper
 {
     public static CubeDto ToDto(Cubie[,,] cubies)

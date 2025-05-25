@@ -2,7 +2,7 @@ namespace CuboMagicoBack.Models;
 public class Cube
 {
     private const int Size = 3;
-    public Cubie[,,] Cubies { get; private set; } = new Cubie[Size, Size, Size];
+    public Cubie[,,] Cubies { get;  set; } = new Cubie[Size, Size, Size];
 
     public Cube()
     {

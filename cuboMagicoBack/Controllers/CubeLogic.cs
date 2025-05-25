@@ -1,4 +1,6 @@
-﻿public enum CubeFace
+﻿using CuboMagicoBack.Models;
+
+public enum CubeFace
 {
     Up,
     Down,
@@ -49,18 +51,28 @@ public static class CubeLogic
     }
 
     private static void RotateCubieFacesClockwise(Cubie cubie, Face rotatingFace)
-{
-    if (rotatingFace != Face.Up)
-        throw new NotImplementedException("Somente a rotação da face Up foi implementada.");
+    {
+        if (rotatingFace != Face.Up)
+            throw new NotImplementedException("Somente a rotação da face Up foi implementada.");
 
-    // Roda as cores das faces lateralmente (como vista de cima)
-    var original = new Dictionary<Face, string>(cubie.FaceColors);
+        // Salva as cores atuais das faces laterais
+        var front = cubie.FaceColors.ContainsKey(Face.Front) ? cubie.FaceColors[Face.Front] : null;
+        var right = cubie.FaceColors.ContainsKey(Face.Right) ? cubie.FaceColors[Face.Right] : null;
+        var back = cubie.FaceColors.ContainsKey(Face.Back) ? cubie.FaceColors[Face.Back] : null;
+        var left = cubie.FaceColors.ContainsKey(Face.Left) ? cubie.FaceColors[Face.Left] : null;
 
-    if (original.ContainsKey(Face.Front)) cubie.SetColor(Face.Right, original[Face.Front]);
-    if (original.ContainsKey(Face.Right)) cubie.SetColor(Face.Back, original[Face.Right]);
-    if (original.ContainsKey(Face.Back)) cubie.SetColor(Face.Left, original[Face.Back]);
-    if (original.ContainsKey(Face.Left)) cubie.SetColor(Face.Front, original[Face.Left]);
-}
+        // Limpa as faces laterais antes de rotacionar
+        cubie.RemoveColor(Face.Front);
+        cubie.RemoveColor(Face.Right);
+        cubie.RemoveColor(Face.Back);
+        cubie.RemoveColor(Face.Left);
+
+        // Rotaciona apenas as cores que existiam
+        if (left != null) cubie.SetColor(Face.Front, left);
+        if (front != null) cubie.SetColor(Face.Right, front);
+        if (right != null) cubie.SetColor(Face.Back, right);
+        if (back != null) cubie.SetColor(Face.Left, back);
+    }
 
     public static void PrintTopFace(Cubie[,,] cubies)
     {
@@ -87,5 +99,4 @@ public static class CubeLogic
         // Pode usar uma tabela de tradução ou switch para chamar o método certo
     }
 
-    // Outras funções auxiliares como rotacionar uma camada, validar estado, etc.
 }
