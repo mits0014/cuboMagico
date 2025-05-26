@@ -1,0 +1,87 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\MATHEUS\\Desktop\\cuboMagicovite\\testeRotacaoCubo\\testeRotacaoCubo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D0E6EB99-2870-AFE6-8950-32CE737033F3}|testeRotacaoCubo.csproj|c:\\users\\matheus\\desktop\\cubomagicovite\\testerotacaocubo\\testerotacaocubo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0E6EB99-2870-AFE6-8950-32CE737033F3}|testeRotacaoCubo.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0E6EB99-2870-AFE6-8950-32CE737033F3}|testeRotacaoCubo.csproj|c:\\users\\matheus\\desktop\\cubomagicovite\\testerotacaocubo\\testerotacaocubo\\controllers\\cubemapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0E6EB99-2870-AFE6-8950-32CE737033F3}|testeRotacaoCubo.csproj|solutionrelative:controllers\\cubemapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0E6EB99-2870-AFE6-8950-32CE737033F3}|testeRotacaoCubo.csproj|c:\\users\\matheus\\desktop\\cubomagicovite\\testerotacaocubo\\testerotacaocubo\\controllers\\cubeexporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0E6EB99-2870-AFE6-8950-32CE737033F3}|testeRotacaoCubo.csproj|solutionrelative:controllers\\cubeexporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CubeExporter.cs",
+              "DocumentMoniker": "C:\\Users\\MATHEUS\\Desktop\\cuboMagicovite\\testeRotacaoCubo\\testeRotacaoCubo\\Controllers\\CubeExporter.cs",
+              "RelativeDocumentMoniker": "Controllers\\CubeExporter.cs",
+              "ToolTip": "C:\\Users\\MATHEUS\\Desktop\\cuboMagicovite\\testeRotacaoCubo\\testeRotacaoCubo\\Controllers\\CubeExporter.cs",
+              "RelativeToolTip": "Controllers\\CubeExporter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T20:59:17.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CubeMapper.cs",
+              "DocumentMoniker": "C:\\Users\\MATHEUS\\Desktop\\cuboMagicovite\\testeRotacaoCubo\\testeRotacaoCubo\\Controllers\\CubeMapper.cs",
+              "RelativeDocumentMoniker": "Controllers\\CubeMapper.cs",
+              "ToolTip": "C:\\Users\\MATHEUS\\Desktop\\cuboMagicovite\\testeRotacaoCubo\\testeRotacaoCubo\\Controllers\\CubeMapper.cs",
+              "RelativeToolTip": "Controllers\\CubeMapper.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAtwCkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T20:21:57.156Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\MATHEUS\\Desktop\\cuboMagicovite\\testeRotacaoCubo\\testeRotacaoCubo\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\MATHEUS\\Desktop\\cuboMagicovite\\testeRotacaoCubo\\testeRotacaoCubo\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T20:06:48.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AgIAAOMUAAAAAAAAAAAEwP0UAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-05-25T20:04:20.539Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

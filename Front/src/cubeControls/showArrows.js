@@ -1,35 +1,51 @@
 import * as THREE from 'three';
 import { onClickArrow } from './arrowAction';
 
+let clickListenerAtivo = false;
+
+let arrowsGroup = null; // Fora da função para manter referência
+
 export function showArrows(cubies, scene, camera) {
     const raycaster = new THREE.Raycaster();
     const mouse = new THREE.Vector2();
 
-    const arrowsGroup = new THREE.Group();
-    scene.add(arrowsGroup);
+    if (!arrowsGroup) {
+        arrowsGroup = new THREE.Group();
+        scene.add(arrowsGroup);
+    }
 
-
-    window.addEventListener('click', (event) => {
+    function handleClick(event) {
         mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
         mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
 
         raycaster.setFromCamera(mouse, camera);
-
         const intersects = raycaster.intersectObjects(cubies);
 
-        const cubieClicado = intersects[0].object;
-        console.log('Cubie clicado:', cubieClicado.position);
         if (intersects.length > 0) {
             const intersect = intersects[0];
             const clickedCubie = intersect.object;
             const faceIndex = intersect.faceIndex;
 
+            console.log('Cubie clicado:', clickedCubie.position);
+
+            // Remove setas anteriores
+            arrowsGroup.clear();
+
             // Descobrir qual face foi clicada
             const faceDirection = getClickedFaceDirection(faceIndex);
             renderArrows(clickedCubie, faceDirection, arrowsGroup, camera);
         }
-    });
+    }
+
+    // Garante que o listener seja adicionado apenas uma vez
+    if (!window._arrowClickListenerSet) {
+        window.addEventListener('click', handleClick);
+        window._arrowClickListenerSet = true;
+    }
 }
+
+
+
 
 function createCustomArrow(direction, origin, length = 1.5, color = 0xA732FA) {
     const arrowGroup = new THREE.Group();
@@ -63,11 +79,13 @@ function createCustomArrow(direction, origin, length = 1.5, color = 0xA732FA) {
 
 
 
+let currentArrowClickListener = null;
+
 export function renderArrows(cubie, faceDirection, arrowsGroup, camera) {
     const arrows = [];
 
     const directions = {
-        Front: [new THREE.Vector3(1, 0, 0), new THREE.Vector3(0, 1, 0), new THREE.Vector3(-1, 0, -0), new THREE.Vector3(0, -1, 0)],
+        Front: [new THREE.Vector3(1, 0, 0), new THREE.Vector3(0, 1, 0), new THREE.Vector3(-1, 0, 0), new THREE.Vector3(0, -1, 0)],
         Back: [new THREE.Vector3(-1, 0, 0), new THREE.Vector3(1, 0, 0), new THREE.Vector3(0, -1, 0), new THREE.Vector3(0, 1, 0)],
         Left: [new THREE.Vector3(0, -1, 0), new THREE.Vector3(0, 0, 1), new THREE.Vector3(0, 0, -1), new THREE.Vector3(0, 1, 0)],
         Right: [new THREE.Vector3(0, 1, 0), new THREE.Vector3(0, 0, -1), new THREE.Vector3(0, -1, 0), new THREE.Vector3(0, 0, 1)],
@@ -92,8 +110,25 @@ export function renderArrows(cubie, faceDirection, arrowsGroup, camera) {
         arrowsGroup.add(arrow);
         arrows.push(arrow);
     });
-    window.addEventListener('click', (event) => onClickArrow(event, camera, arrowsGroup, origin), false);
+
+    // Remove o listener anterior, se existir
+    if (currentArrowClickListener) {
+        window.removeEventListener('click', currentArrowClickListener);
+    }
+
+    // Cria uma função nomeada com os parâmetros atuais
+    currentArrowClickListener = function (event) {
+        onClickArrow(event, camera, arrowsGroup, origin);
+
+        // (Opcional) Remover após o clique, se a rotação for única
+        // window.removeEventListener('click', currentArrowClickListener);
+        // currentArrowClickListener = null;
+    };
+
+    // Adiciona o novo listener
+    window.addEventListener('click', currentArrowClickListener);
 }
+
 
 function getClickedFaceDirection(faceIndex) {
     const faceId = Math.floor(faceIndex / 2);

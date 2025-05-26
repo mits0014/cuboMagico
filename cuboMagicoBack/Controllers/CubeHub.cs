@@ -1,5 +1,7 @@
 ﻿using CuboMagicoBack.Models;
+using CuboMagicoBack.Controllers;
 using Microsoft.AspNetCore.SignalR;
+using System.Text.Json;
 // Add the following using if Cube is in a different namespace, e.g. cuboMagicoBack.CubeLogic
 // using cuboMagicoBack.CubeLogic;
 
@@ -20,22 +22,33 @@ namespace cuboMagicoBack.Controllers
                 return;
             }
 
+            if (direction == "clockwise")
+            {
+                Console.WriteLine($"Rotating face {parsedFace} clockwise.");
+                CubeLogic.RotateFaceClockwise(_cubeState.Cubies, (CubeFace)parsedFace);
+            }
+            else
+            {
+                Console.WriteLine($"Rotating face {parsedFace} counterclockwise.");
+                CubeLogic.RotateFaceCounterClockwise(_cubeState.Cubies, (CubeFace)parsedFace);
+            }
+            
 
 
-            // Rotaciona a face apropriada
-            CubeLogic.RotateFaceClockwise(_cubeState.Cubies, (CubeFace)parsedFace);
-
-            // Envia o novo estado do cubo a todos os clientes
             Console.WriteLine($"Sending updated cube state to all clients.");
-            var dto = CubeMapper.ToDto(_cubeState.Cubies);
-            await Clients.All.SendAsync("CubeUpdated", dto);
+            string stateString = _cubeState.ToString();
+            var parsedState = Cube.ParseCubeStateFromString(stateString);
+            await Clients.All.SendAsync("CubeUpdated", new { cubies = parsedState });
+            
         }
 
         public override async Task OnConnectedAsync()
         {
-            Console.WriteLine($"Client connected: {Context.ConnectionId} serializando o cubo");
-            var dto = CubeMapper.ToDto(_cubeState.Cubies);
-            await Clients.Caller.SendAsync("CubeUpdated", dto);
+            Console.WriteLine($"Client connected: serializando o cubo");
+            string stateString = _cubeState.ToString();
+            var parsedState = Cube.ParseCubeStateFromString(stateString);
+            await Clients.All.SendAsync("CubeUpdated", new { cubies = parsedState });
+
         }
     }
 }

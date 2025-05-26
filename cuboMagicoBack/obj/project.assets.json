@@ -1915,23 +1915,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\MatheusLima\\.nuget\\packages\\": {},
+    "C:\\Users\\MATHEUS\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MatheusLima\\OneDrive\\Área de Trabalho\\cuboMagico\\cuboMagicoBack\\cuboMagicoBack.csproj",
+      "projectUniqueName": "C:\\Users\\MATHEUS\\Desktop\\cuboMagicovite\\cuboMagicoBack\\cuboMagicoBack.csproj",
       "projectName": "cuboMagicoBack",
-      "projectPath": "C:\\Users\\MatheusLima\\OneDrive\\Área de Trabalho\\cuboMagico\\cuboMagicoBack\\cuboMagicoBack.csproj",
-      "packagesPath": "C:\\Users\\MatheusLima\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MatheusLima\\OneDrive\\Área de Trabalho\\cuboMagico\\cuboMagicoBack\\obj\\",
+      "projectPath": "C:\\Users\\MATHEUS\\Desktop\\cuboMagicovite\\cuboMagicoBack\\cuboMagicoBack.csproj",
+      "packagesPath": "C:\\Users\\MATHEUS\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\MATHEUS\\Desktop\\cuboMagicovite\\cuboMagicoBack\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\MatheusLima\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\MATHEUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1958,7 +1958,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net8.0": {
@@ -1992,7 +1992,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,0 +1,8 @@
+﻿CubieDto;CubieDto.X;CubieDto.Y;CubieDto.Z;CubieDto.FaceColors
+CubieDto;0;0;0;"[[Down, Yellow], [Left, Orange], [Back, Blue]]"
+CubieDto;0;0;1;"[[Down, Yellow], [Left, Orange]]"
+CubieDto;0;0;2;"[[Down, Yellow], [Left, Orange], [Front, Green]]"
+CubieDto;0;1;0;"[[Left, Orange], [Back, Blue]]"
+CubieDto;0;1;1;"[[Left, Orange]]"
+CubieDto;0;1;2;"[[Left, Orange], [Front, Green]]"
+CubieDto;2;2;0;"[[Up, White], [Left, Blue], [Back, Red]]"

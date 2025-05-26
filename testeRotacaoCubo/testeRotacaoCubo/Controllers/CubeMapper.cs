@@ -1,31 +1,42 @@
-public static class CubeMapper
+using CuboMagicoBack.Models;
+
+namespace CuboMagicoBack.Controllers
 {
-    public static CubeDto ToDto(Cubie[,,] cubies)
+    public static class CubeMapper
     {
-        var list = new List<CubieDto>();
-
-        int sizeX = cubies.GetLength(0);
-        int sizeY = cubies.GetLength(1);
-        int sizeZ = cubies.GetLength(2);
-
-        for (int x = 0; x < sizeX; x++)
-        {
-            for (int y = 0; y < sizeY; y++)
+            public static CubeDto ToDto(Cubie[,,] cubies)
             {
-                for (int z = 0; z < sizeZ; z++)
+                var list = new List<CubieDto>();
+
+                int sizeX = cubies.GetLength(0);
+                int sizeY = cubies.GetLength(1);
+                int sizeZ = cubies.GetLength(2);
+
+                for (int x = 0; x < sizeX; x++)
                 {
-                    var cubie = cubies[x, y, z];
-                    list.Add(new CubieDto
+                    for (int y = 0; y < sizeY; y++)
                     {
-                        X = cubie.X,
-                        Y = cubie.Y,
-                        Z = cubie.Z,
-                        FaceColors = new Dictionary<Face, string>(cubie.FaceColors)
-                    });
+                        for (int z = 0; z < sizeZ; z++)
+                        {
+                            var cubie = cubies[x, y, z];
+
+                            // Copia as cores de forma defensiva
+                            var faceColors = cubie.FaceColors
+                                .Where(kvp => !string.IsNullOrWhiteSpace(kvp.Value))
+                                .ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+
+                            list.Add(new CubieDto
+                            {
+                                X = cubie.X,
+                                Y = cubie.Y,
+                                Z = cubie.Z,
+                                FaceColors = faceColors
+                            });
+                        }
+                    }
                 }
+
+                return new CubeDto { Cubies = list };
             }
         }
-
-        return new CubeDto { Cubies = list };
-    }
 }

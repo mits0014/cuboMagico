@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("testeRotacaoCubo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+33e5031a23abd9cde7674d53d38505cc1643a227")]
 [assembly: System.Reflection.AssemblyProductAttribute("testeRotacaoCubo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("testeRotacaoCubo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

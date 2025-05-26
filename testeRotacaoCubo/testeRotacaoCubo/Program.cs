@@ -1,5 +1,8 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿            using System.Text.Json;
+// See https://aka.ms/new-console-template for more information
 using CuboMagicoBack.Models;
+
+using CuboMagicoBack.Controllers;
 
 Console.WriteLine("Bem-vindo ao Risckcube!");
 
@@ -58,6 +61,20 @@ while (!sair)
             Console.Write("Digite a direção (horario/antihorario): ");
             // Implemente o método Rotate na classe Cube
             CubeLogic.RotateFaceClockwise(_cubeState.Cubies, face);
+
+            
+
+            var cube = _cubeState;
+
+
+
+
+            // ...
+
+            var export = CubeExporter.FlattenCubeForExport(_cubeState.Cubies);
+            string json = JsonSerializer.Serialize(export, new JsonSerializerOptions { WriteIndented = true });
+            Console.WriteLine(json);
+
             Console.WriteLine("Face rotacionada!");
             break;
         case "11":

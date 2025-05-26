@@ -12,3 +12,18 @@ C:\Users\MatheusLima\OneDrive\Área de Trabalho\testeRotacaoCubo\testeRotacaoCub
 C:\Users\MatheusLima\OneDrive\Área de Trabalho\testeRotacaoCubo\testeRotacaoCubo\obj\Debug\net9.0\testeRotacaoCubo.pdb
 C:\Users\MatheusLima\OneDrive\Área de Trabalho\testeRotacaoCubo\testeRotacaoCubo\obj\Debug\net9.0\testeRotacaoCubo.genruntimeconfig.cache
 C:\Users\MatheusLima\OneDrive\Área de Trabalho\testeRotacaoCubo\testeRotacaoCubo\obj\Debug\net9.0\ref\testeRotacaoCubo.dll
+C:\Users\MATHEUS\Desktop\cuboMagicovite\testeRotacaoCubo\testeRotacaoCubo\bin\Debug\net9.0\testeRotacaoCubo.exe
+C:\Users\MATHEUS\Desktop\cuboMagicovite\testeRotacaoCubo\testeRotacaoCubo\bin\Debug\net9.0\testeRotacaoCubo.deps.json
+C:\Users\MATHEUS\Desktop\cuboMagicovite\testeRotacaoCubo\testeRotacaoCubo\bin\Debug\net9.0\testeRotacaoCubo.runtimeconfig.json
+C:\Users\MATHEUS\Desktop\cuboMagicovite\testeRotacaoCubo\testeRotacaoCubo\bin\Debug\net9.0\testeRotacaoCubo.dll
+C:\Users\MATHEUS\Desktop\cuboMagicovite\testeRotacaoCubo\testeRotacaoCubo\bin\Debug\net9.0\testeRotacaoCubo.pdb
+C:\Users\MATHEUS\Desktop\cuboMagicovite\testeRotacaoCubo\testeRotacaoCubo\obj\Debug\net9.0\testeRotacaoCubo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MATHEUS\Desktop\cuboMagicovite\testeRotacaoCubo\testeRotacaoCubo\obj\Debug\net9.0\testeRotacaoCubo.AssemblyInfoInputs.cache
+C:\Users\MATHEUS\Desktop\cuboMagicovite\testeRotacaoCubo\testeRotacaoCubo\obj\Debug\net9.0\testeRotacaoCubo.AssemblyInfo.cs
+C:\Users\MATHEUS\Desktop\cuboMagicovite\testeRotacaoCubo\testeRotacaoCubo\obj\Debug\net9.0\testeRotacaoCubo.csproj.CoreCompileInputs.cache
+C:\Users\MATHEUS\Desktop\cuboMagicovite\testeRotacaoCubo\testeRotacaoCubo\obj\Debug\net9.0\testeRotacaoCubo.sourcelink.json
+C:\Users\MATHEUS\Desktop\cuboMagicovite\testeRotacaoCubo\testeRotacaoCubo\obj\Debug\net9.0\testeRotacaoCubo.dll
+C:\Users\MATHEUS\Desktop\cuboMagicovite\testeRotacaoCubo\testeRotacaoCubo\obj\Debug\net9.0\refint\testeRotacaoCubo.dll
+C:\Users\MATHEUS\Desktop\cuboMagicovite\testeRotacaoCubo\testeRotacaoCubo\obj\Debug\net9.0\testeRotacaoCubo.pdb
+C:\Users\MATHEUS\Desktop\cuboMagicovite\testeRotacaoCubo\testeRotacaoCubo\obj\Debug\net9.0\testeRotacaoCubo.genruntimeconfig.cache
+C:\Users\MATHEUS\Desktop\cuboMagicovite\testeRotacaoCubo\testeRotacaoCubo\obj\Debug\net9.0\ref\testeRotacaoCubo.dll

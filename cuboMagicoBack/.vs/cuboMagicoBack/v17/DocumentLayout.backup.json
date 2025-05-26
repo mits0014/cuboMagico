@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\MATHEUS\\Desktop\\cuboMagicovite\\cuboMagicoBack\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4C3729A7-0631-4396-9301-5E3471E1FA28}|cuboMagicoBack.csproj|c:\\users\\matheus\\desktop\\cubomagicovite\\cubomagicoback\\controllers\\cubelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C3729A7-0631-4396-9301-5E3471E1FA28}|cuboMagicoBack.csproj|solutionrelative:controllers\\cubelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C3729A7-0631-4396-9301-5E3471E1FA28}|cuboMagicoBack.csproj|c:\\users\\matheus\\desktop\\cubomagicovite\\cubomagicoback\\controllers\\cubehub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C3729A7-0631-4396-9301-5E3471E1FA28}|cuboMagicoBack.csproj|solutionrelative:controllers\\cubehub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4C3729A7-0631-4396-9301-5E3471E1FA28}|cuboMagicoBack.csproj|c:\\users\\matheus\\desktop\\cubomagicovite\\cubomagicoback\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{4C3729A7-0631-4396-9301-5E3471E1FA28}|cuboMagicoBack.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -11,20 +19,12 @@
       "RelativeMoniker": "D:0:0:{4C3729A7-0631-4396-9301-5E3471E1FA28}|cuboMagicoBack.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4C3729A7-0631-4396-9301-5E3471E1FA28}|cuboMagicoBack.csproj|c:\\users\\matheus\\desktop\\cubomagicovite\\cubomagicoback\\controllers\\cubehub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C3729A7-0631-4396-9301-5E3471E1FA28}|cuboMagicoBack.csproj|solutionrelative:controllers\\cubehub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4C3729A7-0631-4396-9301-5E3471E1FA28}|cuboMagicoBack.csproj|c:\\users\\matheus\\desktop\\cubomagicovite\\cubomagicoback\\controllers\\cubelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C3729A7-0631-4396-9301-5E3471E1FA28}|cuboMagicoBack.csproj|solutionrelative:controllers\\cubelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4C3729A7-0631-4396-9301-5E3471E1FA28}|cuboMagicoBack.csproj|c:\\users\\matheus\\desktop\\cubomagicovite\\cubomagicoback\\models\\cubestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C3729A7-0631-4396-9301-5E3471E1FA28}|cuboMagicoBack.csproj|solutionrelative:models\\cubestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4C3729A7-0631-4396-9301-5E3471E1FA28}|cuboMagicoBack.csproj|c:\\users\\matheus\\desktop\\cubomagicovite\\cubomagicoback\\cubomagicoback.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{4C3729A7-0631-4396-9301-5E3471E1FA28}|cuboMagicoBack.csproj|solutionrelative:cubomagicoback.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MATHEUS\\Desktop\\cuboMagicovite\\cuboMagicoBack\\Models\\CubeState.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\CubeState.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,24 +34,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "CubeHub.cs",
               "DocumentMoniker": "C:\\Users\\MATHEUS\\Desktop\\cuboMagicovite\\cuboMagicoBack\\Controllers\\CubeHub.cs",
               "RelativeDocumentMoniker": "Controllers\\CubeHub.cs",
               "ToolTip": "C:\\Users\\MATHEUS\\Desktop\\cuboMagicovite\\cuboMagicoBack\\Controllers\\CubeHub.cs",
               "RelativeToolTip": "Controllers\\CubeHub.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABDAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwCcAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-22T23:01:49.86Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "CubeState.cs",
               "DocumentMoniker": "C:\\Users\\MATHEUS\\Desktop\\cuboMagicovite\\cuboMagicoBack\\Models\\CubeState.cs",
               "RelativeDocumentMoniker": "Models\\CubeState.cs",
@@ -59,12 +59,11 @@
               "RelativeToolTip": "Models\\CubeState.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T23:00:32.147Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-22T23:00:32.147Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\MATHEUS\\Desktop\\cuboMagicovite\\cuboMagicoBack\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
@@ -77,20 +76,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "cuboMagicoBack",
+              "DocumentIndex": 4,
+              "Title": "cuboMagicoBack.csproj",
               "DocumentMoniker": "C:\\Users\\MATHEUS\\Desktop\\cuboMagicovite\\cuboMagicoBack\\cuboMagicoBack.csproj",
               "RelativeDocumentMoniker": "cuboMagicoBack.csproj",
               "ToolTip": "C:\\Users\\MATHEUS\\Desktop\\cuboMagicovite\\cuboMagicoBack\\cuboMagicoBack.csproj",
               "RelativeToolTip": "cuboMagicoBack.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-05-22T22:29:03.53Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-22T22:29:03.53Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\MATHEUS\\Desktop\\cuboMagicovite\\cuboMagicoBack\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -98,18 +96,17 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T03:52:37.38Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-22T03:52:37.38Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "CubeLogic.cs",
               "DocumentMoniker": "C:\\Users\\MATHEUS\\Desktop\\cuboMagicovite\\cuboMagicoBack\\Controllers\\CubeLogic.cs",
               "RelativeDocumentMoniker": "Controllers\\CubeLogic.cs",
               "ToolTip": "C:\\Users\\MATHEUS\\Desktop\\cuboMagicovite\\cuboMagicoBack\\Controllers\\CubeLogic.cs",
               "RelativeToolTip": "Controllers\\CubeLogic.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-22T23:03:15.366Z",
               "EditorCaption": ""
