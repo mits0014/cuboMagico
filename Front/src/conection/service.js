@@ -21,10 +21,10 @@ const rotationMap = {
 
   //canto superior esquerdo frente
   '0,2,2|Front|up': { face: 'left', direction: 'clockwise' },
-  '0,2,2|Front|Left': { face: 'Up', direction: 'CounterClockwise' },
+  '0,2,2|Front|Left': { face: 'up', direction: 'CounterClockwise' },
   '0,2,2|Left|up': { face: 'front', direction: 'CounterClockwise' },
   '0,2,2|Left|front': { face: 'up', direction: 'clockwise' },
-  '0,2,2|Up|Front': { face: 'front', direction: 'CounterClockwise' },
+  '0,2,2|Up|front': { face: 'left', direction: 'CounterClockwise' },
   '0,2,2|Up|left': { face: 'down', direction: 'counter' },
 
   //canto superior direito frente
