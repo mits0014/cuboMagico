@@ -32,14 +32,14 @@ namespace cuboMagicoBack.Controllers
                 Console.WriteLine($"Rotating face {parsedFace} counterclockwise.");
                 CubeLogic.RotateFaceCounterClockwise(_cubeState.Cubies, (CubeFace)parsedFace);
             }
-            
+
 
 
             Console.WriteLine($"Sending updated cube state to all clients.");
             string stateString = _cubeState.ToString();
             var parsedState = Cube.ParseCubeStateFromString(stateString);
             await Clients.All.SendAsync("CubeUpdated", new { cubies = parsedState });
-            
+
         }
 
         public override async Task OnConnectedAsync()
@@ -49,6 +49,24 @@ namespace cuboMagicoBack.Controllers
             var parsedState = Cube.ParseCubeStateFromString(stateString);
             await Clients.All.SendAsync("CubeUpdated", new { cubies = parsedState });
 
+        }
+
+        public async Task ResetCube()
+        {
+            Console.WriteLine("Resetting cube to initial state.");
+            _cubeState = new Cube(); // Reseta o cubo para o estado inicial
+            string stateString = _cubeState.ToString();
+            var parsedState = Cube.ParseCubeStateFromString(stateString);
+            await Clients.All.SendAsync("CubeUpdated", new { cubies = parsedState });
+        }
+        
+        public async Task shuffleCube()
+        {
+            Console.WriteLine("Shuffling cube.");
+            CubeLogic.shuffleCubie(_cubeState.Cubies); // Chama o método de embaralhamento do cubo
+            string stateString = _cubeState.ToString();
+            var parsedState = Cube.ParseCubeStateFromString(stateString);
+            await Clients.All.SendAsync("CubeUpdated", new { cubies = parsedState });
         }
     }
 }

@@ -198,13 +198,27 @@ public static class CubeLogic
         Console.WriteLine();
     }
 
-
-
-
-    public static void ApplyMove(Cubie[,,] cubies, string move)
+    public static void shuffleCubie(Cubie[,,] cubies)
     {
-        // Exemplo: "U", "U'", "R", "L", etc.
-        // Pode usar uma tabela de tradução ou switch para chamar o método certo
+        Random random = new Random();
+        int muves = random.Next(10, 20);
+        for (int i = 0; i < muves; i++)
+        {
+            // Escolhe uma face aleatória para rotacionar
+            CubeFace face = (CubeFace)random.Next(0, 6);
+
+            int y = random.Next(0, 2); // Apenas para dar uma pausa entre as rotações
+            if (y == 0)
+            {
+                RotateFaceCounterClockwise(cubies, face);
+            }
+            else
+            {
+                // Aqui você poderia implementar a rotação anti-horária, se necessário
+                // Por enquanto, apenas rotaciona no sentido horário
+                RotateFaceClockwise(cubies, face);
+            }
+        }
     }
 
 
