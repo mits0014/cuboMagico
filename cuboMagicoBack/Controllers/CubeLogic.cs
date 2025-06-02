@@ -221,6 +221,59 @@ public static class CubeLogic
         }
     }
 
+    public static bool IsCubeSolved(Cubie[,,] cubies)
+    {
+        // Para cada face do cubo
+        foreach (Face face in Enum.GetValues(typeof(Face)))
+        {
+            // Determina a camada fixa para cada face
+            int fixedIndex = face switch
+            {
+                Face.Up => 2,
+                Face.Down => 0,
+                Face.Left => 0,
+                Face.Right => 2,
+                Face.Front => 2,
+                Face.Back => 0,
+                _ => throw new ArgumentException("Face inválida")
+            };
+
+            // Obtém a cor da primeira peça da face para comparar
+            object referenceColor = face switch
+            {
+                Face.Up => cubies[0, 2, 0].FaceColors[Face.Up],
+                Face.Down => cubies[0, 0, 0].FaceColors[Face.Down],
+                Face.Left => cubies[0, 0, 0].FaceColors[Face.Left],
+                Face.Right => cubies[2, 0, 0].FaceColors[Face.Right],
+                Face.Front => cubies[0, 0, 2].FaceColors[Face.Front],
+                Face.Back => cubies[0, 0, 0].FaceColors[Face.Back],
+                _ => null
+            };
+
+            // Percorre todos os cubies da face e compara as cores
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    object color = face switch
+                    {
+                        Face.Up => cubies[i, 2, j].FaceColors[Face.Up],
+                        Face.Down => cubies[i, 0, j].FaceColors[Face.Down],
+                        Face.Left => cubies[0, i, j].FaceColors[Face.Left],
+                        Face.Right => cubies[2, i, j].FaceColors[Face.Right],
+                        Face.Front => cubies[i, j, 2].FaceColors[Face.Front],
+                        Face.Back => cubies[i, j, 0].FaceColors[Face.Back],
+                        _ => null
+                    };
+                    if (!referenceColor.Equals(color))
+                        return false;
+                    Console.WriteLine($"Verificando cubie na face {face}: ({i}, {j}) - cor esperada: {referenceColor}, cor encontrada: {color}");
+                }
+            }
+        }
+        return true;
+    }
+
 
     // Outras funções auxiliares como rotacionar uma camada, validar estado, etc.
 }

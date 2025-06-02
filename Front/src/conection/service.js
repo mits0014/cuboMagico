@@ -1,14 +1,37 @@
-import { connection } from "../main";
+import { updateCubeInScene } from "../createCubies";
+import { connection, scene, camera} from "../main";
 
 export function sendRotation(face, direction, cubie) {
   connection.invoke("Rotate", face, direction, cubie.x, cubie.y, cubie.z);
   console.log("Comando enviado:", face, direction);
 }
 
-function arraysEqual(a, b) {
-  return Array.isArray(a) && Array.isArray(b) && a.length === b.length &&
-    a.every((val, index) => val === b[index]);
+async function sendShuffleComand() {
+    connection.invoke("shuffleCube");  
 }
+async function sendResetComand() {
+  connection.invoke("resetCube");
+}
+async function verifyWinCondition() {
+  let response = await connection.invoke("verifyWinCondition");
+  console.log("Verificando condição de vitória:", response);
+  if (response) { alert("Parabéns! Você resolveu o cubo!"); }
+  else { alert("Cubo ainda não resolvido."); }
+}
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const btnShuffle = document.getElementById('btn-shuffle');
+  const btnReset = document.getElementById('btn-reset');
+  const btnVerifyWin = document.getElementById('btn-verifyWinCondition');
+
+
+  btnShuffle?.addEventListener('click', sendShuffleComand);
+  btnReset?.addEventListener('click', sendResetComand);
+  btnVerifyWin?.addEventListener('click', verifyWinCondition);
+});
 
 const rotationMap = {
   //canto inferior esquerdo frente

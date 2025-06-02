@@ -4,9 +4,13 @@ import { createControls } from './createControls';
 import * as signalR from "@microsoft/signalr";
 import { updateCubeInScene } from './createCubies';
 
+ $('.menu').on('click', function () {
+      $('.list').toggleClass('hidden');
+    });
+
 // Cena, câmera e renderizador
-const scene = createSence();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+export const scene = createSence();
+export const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
@@ -18,8 +22,6 @@ export const connection = new signalR.HubConnectionBuilder()
   .withUrl("http://localhost:5286/cubehub")
   .withAutomaticReconnect()
   .build();
-
-const cubies = [];
 
 // inicia conexão e escuta atualizações do cubo
 connection.start().then(() => {

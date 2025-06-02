@@ -1,6 +1,5 @@
 import * as THREE from 'three';
 import { showArrows } from './cubeControls/showArrows';
-import { onClickArrow } from './cubeControls/arrowAction';
 
 const faceOrder = ["Right", "Left", "Up", "Down", "Front", "Back"];
 

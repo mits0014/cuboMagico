@@ -59,7 +59,7 @@ namespace cuboMagicoBack.Controllers
             var parsedState = Cube.ParseCubeStateFromString(stateString);
             await Clients.All.SendAsync("CubeUpdated", new { cubies = parsedState });
         }
-        
+
         public async Task shuffleCube()
         {
             Console.WriteLine("Shuffling cube.");
@@ -68,5 +68,15 @@ namespace cuboMagicoBack.Controllers
             var parsedState = Cube.ParseCubeStateFromString(stateString);
             await Clients.All.SendAsync("CubeUpdated", new { cubies = parsedState });
         }
+
+        public async Task<bool> VerifyWinCondition()
+        {
+            Console.WriteLine("Verifying win condition.");
+            bool isSolved = CubeLogic.IsCubeSolved(_cubeState.Cubies);
+            Console.WriteLine($"Win condition checked: isSolved={isSolved}");
+
+            return isSolved;
+        }
+
     }
 }

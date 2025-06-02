@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <title>Cubo Mágico 3D</title>
-  <style>
-    body { margin: 0; }
-    canvas { display: block; }
-  </style>
+  <link rel="stylesheet" href="./src/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
+
 <body>
-  <script type="module" src="./src/main.js">
-  </script>
+  <script type="module" src="./src/main.js"></script>
+
+  <div class="menu">
+    <ul class="list hidden">
+      <li id="btn-shuffle">Embaralhar</li>
+      <li id="btn-reset">Resetar</li>
+      <li id="btn-verifyWinCondition">Verificar solução</li>
+    </ul>
+  </div>
 </body>
+
 </html>
