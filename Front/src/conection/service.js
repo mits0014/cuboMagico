@@ -48,7 +48,7 @@ const rotationMap = {
   '0,2,2|Left|up': { face: 'front', direction: 'CounterClockwise' },
   '0,2,2|Left|front': { face: 'up', direction: 'clockwise' },
   '0,2,2|Up|front': { face: 'left', direction: 'CounterClockwise' },
-  '0,2,2|Up|left': { face: 'down', direction: 'counter' },
+  '0,2,2|Up|Left': { face: 'front', direction: 'clockwise' },
 
   //canto superior direito frente
   '2,2,2|Front|up': { face: 'right', direction: 'clockwise' },

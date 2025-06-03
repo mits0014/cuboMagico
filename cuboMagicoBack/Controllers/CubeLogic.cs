@@ -30,14 +30,12 @@ public static class CubeLogic
             if (face == CubeFace.Up) y = 2;
 
 
-
-            Console.WriteLine($"Rotacionando a face Up (y = {y}) no sentido horário...");
             var original = new Cubie[3, 3];
             for (int x = 0; x < 3; x++)
             {
                 for (int z = 0; z < 3; z++)
                 {
-                    Console.WriteLine($"Cubie[{x}, {y}, {z}] = {cubies[x, y, z].ToString()}");
+
                     original[x, z] = cubies[x, y, z];
                 }
             }
@@ -60,7 +58,7 @@ public static class CubeLogic
             if (face == CubeFace.Right) x = 2;
 
 
-            Console.WriteLine("Rotacionando a face Left (x = 0) no sentido horário...");
+    
             var original = new Cubie[3, 3];
             for (int y = 0; y < 3; y++)
             {
@@ -85,7 +83,6 @@ public static class CubeLogic
             int z = 0; // A face Front é a camada z = 2
             if (face == CubeFace.Front) z = 2;
 
-            Console.WriteLine($"Rotacionando a face Front (z = {z}) no sentido horário...");
             var original = new Cubie[3, 3];
             for (int x = 0; x < 3; x++)
             {
@@ -180,24 +177,6 @@ public static class CubeLogic
         }
     }
 
-
-
-    public static void PrintTopFace(Cubie[,,] cubies)
-    {
-        Console.WriteLine("Face Up (y = 2):");
-        for (int z = 2; z >= 0; z--) // z de 2 a 0 para que a visualização fique "de cima para baixo"
-        {
-            for (int x = 0; x < 3; x++)
-            {
-                var cubie = cubies[x, 2, z];
-                string color = cubie.FaceColors[Face.Up].ToString().PadRight(7);
-                Console.Write(color + " ");
-            }
-            Console.WriteLine();
-        }
-        Console.WriteLine();
-    }
-
     public static void shuffleCubie(Cubie[,,] cubies)
     {
         Random random = new Random();
@@ -267,7 +246,6 @@ public static class CubeLogic
                     };
                     if (!referenceColor.Equals(color))
                         return false;
-                    Console.WriteLine($"Verificando cubie na face {face}: ({i}, {j}) - cor esperada: {referenceColor}, cor encontrada: {color}");
                 }
             }
         }

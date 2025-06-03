@@ -80,13 +80,13 @@ li:before {
   left: 8px;
 }
 li:nth-child(1):before {
-  content: "";
+  content: "\e8d4";
 }
 li:nth-child(2):before {
-  content: "";
+  content: "\f053";
 }
 li:nth-child(3):before {
-  content: "";
+  content: "\e877";
 }
 li:nth-child(4):before {
   content: "";

@@ -14,7 +14,7 @@ namespace cuboMagicoBack.Controllers
 
         public async Task Rotate(string face, string direction, int x, int y, int z)
         {
-            Console.WriteLine($"Rotação: face={face}, direção={direction}, posição=({x},{y},{z})");
+          
 
             if (!Enum.TryParse<Face>(face, true, out var parsedFace))
             {
@@ -24,18 +24,14 @@ namespace cuboMagicoBack.Controllers
 
             if (direction == "clockwise")
             {
-                Console.WriteLine($"Rotating face {parsedFace} clockwise.");
                 CubeLogic.RotateFaceClockwise(_cubeState.Cubies, (CubeFace)parsedFace);
             }
             else
             {
-                Console.WriteLine($"Rotating face {parsedFace} counterclockwise.");
                 CubeLogic.RotateFaceCounterClockwise(_cubeState.Cubies, (CubeFace)parsedFace);
             }
 
 
-
-            Console.WriteLine($"Sending updated cube state to all clients.");
             string stateString = _cubeState.ToString();
             var parsedState = Cube.ParseCubeStateFromString(stateString);
             await Clients.All.SendAsync("CubeUpdated", new { cubies = parsedState });
@@ -44,7 +40,6 @@ namespace cuboMagicoBack.Controllers
 
         public override async Task OnConnectedAsync()
         {
-            Console.WriteLine($"Client connected: serializando o cubo");
             string stateString = _cubeState.ToString();
             var parsedState = Cube.ParseCubeStateFromString(stateString);
             await Clients.All.SendAsync("CubeUpdated", new { cubies = parsedState });
@@ -53,7 +48,6 @@ namespace cuboMagicoBack.Controllers
 
         public async Task ResetCube()
         {
-            Console.WriteLine("Resetting cube to initial state.");
             _cubeState = new Cube(); // Reseta o cubo para o estado inicial
             string stateString = _cubeState.ToString();
             var parsedState = Cube.ParseCubeStateFromString(stateString);
@@ -62,7 +56,6 @@ namespace cuboMagicoBack.Controllers
 
         public async Task shuffleCube()
         {
-            Console.WriteLine("Shuffling cube.");
             CubeLogic.shuffleCubie(_cubeState.Cubies); // Chama o método de embaralhamento do cubo
             string stateString = _cubeState.ToString();
             var parsedState = Cube.ParseCubeStateFromString(stateString);
@@ -71,10 +64,7 @@ namespace cuboMagicoBack.Controllers
 
         public async Task<bool> VerifyWinCondition()
         {
-            Console.WriteLine("Verifying win condition.");
             bool isSolved = CubeLogic.IsCubeSolved(_cubeState.Cubies);
-            Console.WriteLine($"Win condition checked: isSolved={isSolved}");
-
             return isSolved;
         }
 
