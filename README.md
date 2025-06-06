@@ -16,32 +16,36 @@ O **Cubo Magico** utiliza tecnologias modernas para representar um cubo mágico 
 ## 🚀 Como rodar o projeto
 
 ### 1. Clone o repositório
+- Abra o cmd na pasta de sua preferencia e execute os seguintes comandos.
+
 ```bash
 git clone https://github.com/mits0014/cuboMagico.git
 cd cuboMagico
 ```
 
 ### 2. Backend (.NET)
-1. Navegue até a pasta do backend (ex: `CuboMagico.Server`)
+1. Navegue até a pasta do backend
 2. Execute o projeto:
 ```bash
+cd ./cuboMagicoBack
 dotnet run
 ```
 
 Isso iniciará o servidor SignalR em uma porta definida no `launchSettings.json`.
 
 ### 3. Frontend (Vite + JS)
-1. Navegue até a pasta `frontend`
+1. Em outro terminal navegue até a pasta `frontend`
 2. Instale as dependências (caso existam):
 ```bash
 npm install
 ```
+Este comando instala as dependencias do projeto
 3. Inicie o Vite dev server:
 ```bash
 npm run dev
 ```
 
-O frontend se conectará automaticamente ao servidor SignalR e exibirá o cubo 3D.
+O frontend se conectará automaticamente ao servidor SignalR e exibirá o cubo 3D no seu estagio inicial.
 
 ---
 
@@ -63,24 +67,15 @@ O frontend se conectará automaticamente ao servidor SignalR e exibirá o cubo 3
 
 ```
 cuboMagico/
-├── CuboMagico.Server/       # Backend ASP.NET com SignalR
+├── CuboMagicoBack/       # Backend ASP.NET com SignalR
 ├── frontend/                # Frontend com Vite + Three.js
 ├── README.md
 ```
-
----
-
-## 📌 Melhorias futuras
-
-- Criar script `.bat` para facilitar a execução em ambiente de desenvolvimento.
-- Criar instruções de build para produção.
-- Adicionar testes automatizados.
-
 ---
 
 ## 👨‍💻 Autor
 
-- **Matheus** – [GitHub/mits0014](https://github.com/mits0014)
+- **Matheus Lima da Silveira** – [GitHub/mits0014](https://github.com/mits0014)
 
 ---
 
