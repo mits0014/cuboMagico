@@ -39,7 +39,6 @@ Isso iniciará o servidor SignalR em uma porta definida no `launchSettings.json`
 ```bash
 npm install
 ```
-Este comando instala as dependencias do projeto
 3. Inicie o Vite dev server:
 ```bash
 npm run dev
