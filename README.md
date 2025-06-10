@@ -1,4 +1,5 @@
 # 🧊 Cubo Magico
+![Exemplo de GIF](https://github.com/mits0014/videosEImagens/raw/main/caminho/para/o/arquivo.gif)
 
 Projeto dividido em duas aplicações — **backend** e **frontend** — para simular e interagir com um cubo mágico 3D em tempo real.
 
