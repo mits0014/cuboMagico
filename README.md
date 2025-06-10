@@ -24,6 +24,9 @@ O **Cubo Magico** utiliza tecnologias modernas para representar um cubo mágico 
 
 - Ao selecionar uma face para rotação, o sistema reorganiza os cubies daquela face no sentido horário. Em seguida, cada cubie da face é rotacionado individualmente para refletir a rotação aplicada, garantindo que o estado do cubo seja atualizado corretamente após cada movimento.
 
+- exemplo de como esta rotação funciona, Primeiramente o codigo cria uma copia da facie selecionada, apos isso rearanja os cubinhos trocando os de posição no sentido horario como representa a imagem a baixo
+![Exemplo de GIF](https://github.com/mits0014/videosEImagens/blob/main/1.png)
+
 ---
 ## 🚀 Como rodar o projeto
 
