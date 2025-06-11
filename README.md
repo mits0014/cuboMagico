@@ -33,7 +33,7 @@ O **Cubo Magico** utiliza tecnologias modernas para representar um cubo mágico 
 - ao retornarmos as cores podemos ver que a orientação das mesmas foi mantida, os cubos verdes ficaram com a facie da frente colorida, neste caso temos um problema pois ao olharmos o cubo do lado direito podemos ver que ele não tem uma cor preenchida
 - para isso temos quer rotacionar também cada cubinho para manter a visualização correta de todas as facies do cubo esta rotação é demonstrada na imagem a baixo
 
-![Rotação dos Cubos](https://github.com/mits0014/videosEImagens/blob/main/imagem_rotacao_cubos.png.gif)
+![Rotação dos Cubos](https://github.com/mits0014/videosEImagens/blob/main/imagem_rotacao_cubos.png)
 
 ---
 ## 🚀 Como rodar o projeto
