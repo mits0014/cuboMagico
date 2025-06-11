@@ -20,20 +20,31 @@ O **Cubo Magico** utiliza tecnologias modernas para representar um cubo mágico 
 - Cada cubie é uma tupla que armazena, para cada uma das seis faces, uma cor correspondente. Essas faces são responsáveis por gerenciar a exibição visual e controlar a animação da rotação do cubo.
 
 ### Manipulação do Cubo
-- A classe CubeLogic é responsável por implementar as operações de manipulação do cubo. Ela gerencia tanto a rotação completa de uma face inteira quanto a rotação individual de cada cubie que compõe essa face.
 
-- Ao selecionar uma face para rotação, o sistema reorganiza os cubies daquela face no sentido horário. Em seguida, cada cubie da face é rotacionado individualmente para refletir a rotação aplicada, garantindo que o estado do cubo seja atualizado corretamente após cada movimento.
+A classe `CubeLogic` é responsável por implementar as operações de manipulação do cubo mágico. Ela gerencia tanto a rotação completa de uma face (conjunto de 9 cubies) quanto a rotação individual de cada cubie que a compõe, garantindo a consistência visual e estrutural do cubo após cada movimento.
 
-- exemplo de como esta rotação funciona, Primeiramente o codigo cria uma copia da facie selecionada, apos isso rearanja os cubinhos trocando os de posição no sentido horario como representa a imagem a baixo
+#### Etapas da Rotação
 
-![Rotação da face](https://github.com/mits0014/videosEImagens/blob/main/imagem_rotacao_face.png)
+1. **Criação de uma cópia da face selecionada:**  
+   Ao iniciar a rotação, o sistema cria uma cópia dos 9 cubies da face que será rotacionada.
 
-- Ao visualizar o cubo de cima podemos ver que ele está posicionado da forma correta
-- na transição do 2 para o terceiro cubo, desconsideramos as cores e seguimos com a rotação, que pode ser vista concluida já no estado 3
-- ao retornarmos as cores podemos ver que a orientação das mesmas foi mantida, os cubos verdes ficaram com a facie da frente colorida, neste caso temos um problema pois ao olharmos o cubo do lado direito podemos ver que ele não tem uma cor preenchida
-- para isso temos quer rotacionar também cada cubinho para manter a visualização correta de todas as facies do cubo esta rotação é demonstrada na imagem a baixo
+2. **Reorganização dos cubies no sentido horário:**  
+   Com base na cópia, os cubies são reposicionados conforme uma matriz 3x3 girada no sentido horário. Esse processo altera apenas as posições relativas dos cubies na face.  
+   A imagem abaixo ilustra essa reorganização:
 
-![Rotação dos Cubos](https://github.com/mits0014/videosEImagens/blob/main/imagem_rotacao_cubos.png)
+   ![Rotação da face](https://github.com/mits0014/videosEImagens/blob/main/imagem_rotacao_face.png)
+
+3. **Observação da rotação na prática:**  
+   Ao visualizar o cubo de cima, é possível notar que ele está posicionado corretamente. Na transição do estado 2 para o estado 3 da imagem, desconsideramos temporariamente as cores — focando apenas no reposicionamento estrutural dos cubies.
+
+4. **Preservação da orientação das cores:**  
+   Após reposicionar os cubies, é necessário também rotacionar individualmente cada um deles, para que as cores das faces permaneçam orientadas corretamente. Por exemplo, cubies com a face verde voltada para frente devem continuar com essa orientação após a rotação.  
+   A imagem abaixo demonstra esse ajuste:
+
+   ![Rotação dos Cubos](https://github.com/mits0014/videosEImagens/blob/main/imagem_rotacao_cubos.png)
+
+Sem essa rotação individual, certos cubies (como o do canto direito na imagem) podem acabar com uma face sem cor visível ou com a orientação errada, comprometendo a representação visual correta do cubo.
+
 
 ---
 ## 🚀 Como rodar o projeto
